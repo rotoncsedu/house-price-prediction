@@ -70,24 +70,25 @@ After evaluating multiple machine learning algorithms, **Lasso Regression (α = 
 | **Test MSE** | **10,088,999,283.03** |
 
 ## Project Structure
+
 House-Price-Prediction/
 │
 ├── data/
 │   └── USA_Housing.csv
 │
 ├── notebooks/
-│   └── 1_EDA.ipynb
-    └── 2_Training.ipynb
+│   ├── 1_EDA.ipynb
+│   └── 2_Training.ipynb
 │
 ├── models/
 │   └── best_model.pkl
 │
+├── screenshots/
+│   └── gradio_interface.png
+│
 ├── app.py
 ├── requirements.txt
-├── README.md
-│
-└── screenshots/
-    └── gradio_interface.png
+└── README.md
 
 
 ## Gradio Web Application
