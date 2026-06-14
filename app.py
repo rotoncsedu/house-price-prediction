@@ -25,26 +25,26 @@ interface = gr.Interface(
     fn=predict_house_price,
     inputs=[
         gr.Number(
-            label="Average Area Income ($)",
+            label="Average Income ($)",
             info="Average income of residents in the area",
             value=70000
         ),
         gr.Slider(
-            label="Average Area House Age (years)",
+            label="Average House Age (years)",
             minimum=0,
             maximum=20,
             step=1,
             value=7
         ),
         gr.Slider(
-            label="Average Area Number of Rooms",
+            label="Average Number of Rooms",
             minimum=1,
             maximum=15,
             step=0.5,
             value=5
         ),
         gr.Slider(
-            label="Average Area Number of Bedrooms",
+            label="Average Number of Bedrooms",
             minimum=1,
             maximum=10,
             step=0.5,
