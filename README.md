@@ -15,15 +15,17 @@ This project develops a machine learning model to predict house prices based on 
 
 ## Dataset
 
-#### Features: 
-Feature	Description
-Avg. Area Income	Average income of residents in the area
-Avg. Area House Age	Average age of houses in the area
-Avg. Area Number of Rooms	Average number of rooms
-Avg. Area Number of Bedrooms	Average number of bedrooms
-Area Population	Population of the area
-Price	Target variable (House Price)
-Address	House address (not used for modeling)
+#### Dataset Features
+
+| Feature | Description |
+|----------|-------------|
+| **Avg. Area Income** | Average income of residents in the area |
+| **Avg. Area House Age** | Average age of houses in the area |
+| **Avg. Area Number of Rooms** | Average number of rooms in houses |
+| **Avg. Area Number of Bedrooms** | Average number of bedrooms in houses |
+| **Area Population** | Population of the area |
+| **Price** | Target variable representing house price |
+| **Address** | House address (excluded from modeling) |
 
 ## Dataset Summary:
 - Total Records: 5,000
@@ -40,19 +42,99 @@ Address	House address (not used for modeling)
 
 ## Model Comparison
 
-Sorted Model Comparison Table
-================================================================================
-                  Model       Train R²        Test R²                 Test MSE
-0             Lasso α=1 0.917978743500 0.917997252100 10088999283.031284332275
-1             Ridge α=1 0.917978680300 0.917997220400 10089003188.711675643921
-2           Lasso α=0.1 0.917978743600 0.917997184200 10089007632.228765487671
-3           Ridge α=0.1 0.917978742900 0.917997181400 10089007981.521389007568
-4          Lasso α=0.01 0.917978743600 0.917997171500 10089009198.724899291992
-5     Linear Regression 0.917978743600 0.917997170700 10089009300.893989562988
-6            Ridge α=10 0.917972451900 0.917991943900 10089652363.826902389526
-7   Polynomial Degree 2 0.918147037800 0.917913787400 10099268148.792512893677
-8           Ridge α=100 0.917380169300 0.917403394500 10162063037.444978713989
-9   Polynomial Degree 3 0.918909158300 0.917397016600 10162847726.447463989258
-10              KNN k=7 0.905024606600 0.870490490900 15933872685.276611328125
-11              KNN k=5 0.910855443500 0.869317068200 16078241760.745292663574
-12              KNN k=3 0.928026347500 0.850692200000 18369704995.786712646484
+| Rank | Model | Train R² | Test R² | Test MSE |
+|------|--------|----------|----------|-----------|
+| 1 | **Lasso α=1** | 0.917979 | **0.917997** | 10,088,999,283 |
+| 2 | Ridge α=1 | 0.917979 | 0.917997 | 10,089,003,189 |
+| 3 | Lasso α=0.1 | 0.917979 | 0.917997 | 10,089,007,632 |
+| 4 | Ridge α=0.1 | 0.917979 | 0.917997 | 10,089,007,982 |
+| 5 | Lasso α=0.01 | 0.917979 | 0.917997 | 10,089,009,199 |
+| 6 | Linear Regression | 0.917979 | 0.917997 | 10,089,009,301 |
+| 7 | Ridge α=10 | 0.917972 | 0.917992 | 10,089,652,364 |
+| 8 | Polynomial Degree 2 | 0.918147 | 0.917914 | 10,099,268,149 |
+| 9 | Ridge α=100 | 0.917380 | 0.917403 | 10,162,063,037 |
+| 10 | Polynomial Degree 3 | 0.918909 | 0.917397 | 10,162,847,726 |
+| 11 | KNN k=7 | 0.905025 | 0.870490 | 15,933,872,685 |
+| 12 | KNN k=5 | 0.910855 | 0.869317 | 16,078,241,761 |
+| 13 | KNN k=3 | 0.928026 | 0.850692 | 18,369,704,996 |
+
+
+## 🏆 Best Model
+
+After evaluating multiple machine learning algorithms, **Lasso Regression (α = 1)** was selected as the best-performing model based on the highest **Test R² score**.<br>
+
+| Metric | Value |
+|---------|---------|
+| **Model** | Lasso Regression (α = 1) |
+| **Test R²** | **0.917997** |
+| **Test MSE** | **10,088,999,283.03** |
+
+## Project Structure
+House-Price-Prediction/
+│
+├── data/
+│   └── USA_Housing.csv
+│
+├── notebooks/
+│   └── 1_EDA.ipynb
+    └── 2_Training.ipynb
+│
+├── models/
+│   └── best_model.pkl
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+└── screenshots/
+    └── gradio_interface.png
+
+
+## Gradio Web Application
+
+The project includes a Gradio interface where users can:<br>
+
+- Enter house characteristics
+- Predict house prices instantly
+- Explore example house configurations
+#### Input Features
+- Average Area Income
+- Average House Age
+- Average Number of Rooms
+- Average Number of Bedrooms
+- Area Population
+#### Output
+- Predicted House Price
+
+
+## Installation
+
+#### Clone the repository:
+git clone https://github.com/rotoncsedu/house-price-prediction.git <br>
+cd house-price-prediction
+
+#### Install dependencies:
+
+pip install -r requirements.txt
+
+## Run the Application
+
+python app.py<br>
+
+Or launch the Gradio interface:<br>
+
+interface.launch(share=True)
+
+## Technologies Used
+- Python
+- Pandas , NumPy , Matplotlib , Seaborn
+- Scikit - learn
+- Gradio
+
+## 👨‍💻 Author
+
+Md. Al-Imran Roton
+
+Programmer, Begum Rokeya University, Rangpur
+
+Machine Learning & AI Enthusiast
