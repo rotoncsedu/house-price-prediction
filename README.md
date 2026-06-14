@@ -109,6 +109,12 @@ The project includes a Gradio interface where users can:<br>
 #### Output
 - Predicted House Price
 
+## 📸 Screenshots
+
+#### Gradio Interface
+
+![Gradio Interface](screenshots/gradio_interface.png)
+
 
 ## Installation
 
