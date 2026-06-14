@@ -71,6 +71,7 @@ After evaluating multiple machine learning algorithms, **Lasso Regression (α = 
 
 ## Project Structure
 
+```text
 House-Price-Prediction/
 │
 ├── data/
